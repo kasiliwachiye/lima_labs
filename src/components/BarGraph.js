@@ -53,7 +53,12 @@ export default function BarGraph() {
   return (
     <>
       <div className="container mx-auto my-2">
-        <h1 className="flex justify-center normal-case text-xl font-bold">Click the button to fetch the data</h1>
+        <h1 className="flex justify-center normal-case text-xl font-bold">
+          Click the button to fetch the data -{" "}
+          <span className="text-yellow-400">
+            [also see the little jump it does :)]
+          </span>
+        </h1>
         <div className="flex justify-center m-4">
           <button className="btn" onClick={handleClick}>
             Fetch
@@ -82,9 +87,7 @@ export default function BarGraph() {
                   fontWeight={800}
                 />
               ) : (
-                <YAxis
-                  hide
-                />
+                <YAxis hide />
               )}
               <Bar
                 dataKey={dataKey}
